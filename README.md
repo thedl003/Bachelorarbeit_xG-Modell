@@ -10,7 +10,7 @@ Ziel der Arbeit ist es, mit möglichst einfachen, transparenten Mitteln (logisti
 2. **LR (Geometrie)** – logistische Regression ausschließlich mit den geometrischen Merkmalen Distanz und Schusswinkel
 3. **LR (Erweitert)** – logistische Regression zusätzlich mit kategorialem Spielkontext (Körperteil, Spielsituation)
 
-Alle drei Modelle werden abschließend gegen das offizielle StatsBomb-xG-Modell benchmarkt.
+Alle drei Modelle werden abschließend gegen das offizielle StatsBomb-xG-Modell gebenchmarkt.
 
 ## Datengrundlage
 
@@ -18,10 +18,10 @@ Frei zugängliche Event-Daten von StatsBomb (WM 2022, Männer) über die offizie
 
 ## Methodik
 
-- **Feature Engineering:** Berechnung von Distanz (euklidisch) und sichtbarem Schusswinkel (Kosinussatz) aus den X/Y-Koordinaten
+- **Feature Engineering:** Berechnung von Distanz und sichtbarem Schusswinkel aus den X/Y-Koordinaten
 - **Kodierung:** One-Hot-Encoding kategorialer Merkmale (Körperteil, Spielsituation)
 - **Training:** 80/20 Train-Test-Split mit Stratifizierung, logistische Regression (scikit-learn)
-- **Evaluation:** Log-Loss, ROC-AUC und Brier Score (robust gegenüber der stark unausgeglichenen Klassenverteilung von ca. 10.6 % Toren)
+- **Evaluation:** Log-Loss, ROC-AUC und Brier Score 
 
 ## Ergebnisse
 
